@@ -23,7 +23,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-    if(project.property("isCloud") as Boolean) {
+    if(System.getProperty("isCloud","false").equals("true")) {
         jvmArgs("-javaagent:${project.gradle.gradleUserHomeDir}/caches/modules-2/files-2.1/com.browserstack/browserstack-java-sdk/1.26.2/cd036e1b48c621f477cf2589ce5865fa8a265206/browserstack-java-sdk-1.26.2.jar")
     }
 }
