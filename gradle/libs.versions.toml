@@ -4,7 +4,9 @@
 [versions]
 guava = "33.2.1-jre"
 cucumber = "6.10.4"
+selenium4 = "4.25.0"
 
 [libraries]
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 cucumber = {module = "io.cucumber:cucumber-java", version.ref= "cucumber"}
+selenium4 = {module = "org.seleniumhq.selenium:selenium-java", version.ref="selenium4"}

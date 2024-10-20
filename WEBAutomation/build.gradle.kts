@@ -10,11 +10,20 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    implementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation(libs.cucumber)
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation("org.junit.jupiter:junit-jupiter")
+    implementation(libs.selenium4)
+    implementation(platform("org.apache.logging.log4j:log4j-bom:2.24.1"))
+    implementation("org.apache.logging.log4j:log4j-api")
+    implementation("org.apache.logging.log4j:log4j-core")
+    implementation("org.apache.logging.log4j:log4j-jul")
+    implementation("com.browserstack:browserstack-java-sdk:1.26.2")
 }
 
 tasks.test {
     useJUnitPlatform()
+    if(project.property("isCloud") as Boolean) {
+        jvmArgs("-javaagent:${project.gradle.gradleUserHomeDir}/caches/modules-2/files-2.1/com.browserstack/browserstack-java-sdk/1.26.2/cd036e1b48c621f477cf2589ce5865fa8a265206/browserstack-java-sdk-1.26.2.jar")
+    }
 }
