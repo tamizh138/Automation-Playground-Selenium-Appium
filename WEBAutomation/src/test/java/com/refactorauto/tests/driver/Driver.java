@@ -4,5 +4,6 @@ public enum Driver {
     CHROME,
     FIREFOX,
     IE,
-    SAFARI
+    SAFARI,
+    REMOTEDRIVER
 }

@@ -1,8 +1,11 @@
 package com.refactorauto.tests.driver;
 
+import com.refactorauto.tests.utils.BasicConfigProvider;
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class ChromeHandler implements BrowserHandler{
 
@@ -23,4 +26,12 @@ public class ChromeHandler implements BrowserHandler{
     public void quitDriver() {
         driver.quit();
     }
+
+    private ChromeOptions getChromeOptions() {
+        ChromeOptions options = new ChromeOptions();
+        
+        return
+    }
+
+
 }

@@ -1,0 +1,22 @@
+# Choose mode of testing
+testingMode: local
+
+# Set these properties if it is remote testing
+hostName: localhost
+port: 4444
+
+
+
+# Platforms information for both local and remote testing
+# Based on the testMode platform will be chosen.
+# testMode : local - configuration matching local machine will be chosed first
+# testMode : remote - All the platform configuration considered.
+
+platforms:
+  - os: OS X
+    browserName: Safari
+
+  - os: OS X
+    browserName: Chrome
+
+

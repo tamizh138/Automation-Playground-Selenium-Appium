@@ -17,6 +17,10 @@ public class DriverFactory {
                 handler = new FireFoxHandler();
                 break;
             }
+            case REMOTEDRIVER: {
+                handler = new RemoteWebDriverHandler();
+
+            }
            /*
            TODO : If design finalized we can implement below two
            case IE:

@@ -19,6 +19,8 @@ dependencies {
     implementation("org.apache.logging.log4j:log4j-core")
     implementation("org.apache.logging.log4j:log4j-jul")
     implementation("com.browserstack:browserstack-java-sdk:1.26.2")
+    implementation(libs.snakeYaml)
+
 }
 
 tasks.test {

@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
@@ -25,6 +26,8 @@ public abstract class AbstractBaseTest {
     @BeforeAll
     public static void init() throws Exception {
         handler = DriverFactory.createWebDriverHandler(Driver.CHROME);
+        ChromeOptions options = new ChromeOptions();
+        options.getCapabilityNames();
         driver = handler.createDriver();
         driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(10));
         homePage = new HomePage(driver);
